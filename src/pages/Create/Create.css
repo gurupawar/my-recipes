@@ -1,0 +1,50 @@
+.crate {
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.crate label,
+span,
+textarea {
+  display: block;
+}
+.crate label {
+  margin-bottom: 1rem;
+}
+.crate label input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+.ingr-list {
+  display: flex;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.ingr-list li + li {
+  margin-left: 3px;
+}
+.ingr-btn {
+  margin-left: 1rem;
+}
+
+.flex-group {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .crate {
+    padding: 3rem 5rem;
+  }
+}

@@ -1,0 +1,23 @@
+header {
+  background: #eff0f3;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav .logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  width: 35px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
