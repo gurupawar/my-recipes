@@ -1,0 +1,30 @@
+.search.dark input {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+  color: #fff;
+}
+.search.dark img {
+  filter: invert(100%);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  background-color: transparent;
+  max-width: 110px;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 576px) {
+  .search input {
+    max-width: 100%;
+  }
+}

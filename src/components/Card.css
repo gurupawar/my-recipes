@@ -1,3 +1,21 @@
+.card__wrapper .card.dark {
+  background: #16161a;
+}
+.card__wrapper .card.dark h3 {
+  color: #fffffe;
+}
+.card__wrapper .card.dark p,
+.card__wrapper .card.dark span {
+  color: #94a1b2;
+}
+
+.card__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .card {
   background: #eff0f3;
   color: #0d0d0d;
@@ -11,4 +29,16 @@
 .card h3 {
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .card__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .card__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

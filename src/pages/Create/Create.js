@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Create.css";
 import { useFetch } from "../../hooks/useFetch";
 import { useHistory } from "react-router-dom";
+import { useTheme } from "../../hooks/useTheme";
 const Create = () => {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
@@ -9,6 +10,7 @@ const Create = () => {
   const [newIngrdients, setNewIngrdients] = useState("");
   const [ingrdients, setIngrdients] = useState([]);
   const ingrdientInput = useRef(null);
+  const { mode } = useTheme();
 
   const history = useHistory();
 
@@ -45,7 +47,7 @@ const Create = () => {
   }, [data]);
   return (
     <div className="container">
-      <div className="crate">
+      <div className={`crate ${mode}`}>
         <h2>Create new recipe :- </h2>
         <form onSubmit={handleSubmit}>
           <label>

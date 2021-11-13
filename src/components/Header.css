@@ -1,5 +1,11 @@
-header {
+.header {
   background: #eff0f3;
+}
+.header.dark {
+  background: #16161a;
+}
+.header.dark .logo {
+  filter: invert(100%);
 }
 
 .nav {

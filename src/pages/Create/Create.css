@@ -1,3 +1,25 @@
+.crate.dark {
+  background: #16161a;
+  box-shadow: 0 1px 3px rgba(128, 127, 127, 0.068),
+    0 1px 2px rgba(175, 175, 175, 0.082);
+}
+
+.crate.dark h2,
+.crate.dark label > input,
+.crate.dark label > div input,
+.crate.dark label > span textarea {
+  color: #fff;
+}
+.crate.dark label > span {
+  color: #94a1b2;
+}
+
+.crate.dark label > input,
+.crate.dark label > div input,
+.crate.dark label > span textarea {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+  background: #16161a;
+}
 .crate {
   margin-top: 2rem;
   padding: 3rem 2rem;

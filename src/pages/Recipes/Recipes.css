@@ -1,3 +1,17 @@
+.recipe.dark {
+  background: #16161a;
+  box-shadow: 0 1px 3px rgba(128, 127, 127, 0.068),
+    0 1px 2px rgba(175, 175, 175, 0.082);
+}
+.recipe.dark h1,
+.recipe.dark div,
+.recipe.dark span {
+  color: #fff;
+}
+.recipe.dark div > li,
+.recipe.dark p {
+  color: #94a1b2;
+}
 .recipe {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 3rem 2rem;
