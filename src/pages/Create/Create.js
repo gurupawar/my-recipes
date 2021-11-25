@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import { ProjectFirestore } from "../../firebase/config";
 import "./Create.css";
-import { useFetch } from "../../hooks/useFetch";
 import { useHistory } from "react-router-dom";
 import { useTheme } from "../../hooks/useTheme";
 const Create = () => {
@@ -14,19 +14,21 @@ const Create = () => {
 
   const history = useHistory();
 
-  const { postData, data, error } = useFetch(
-    "http://localhost:8000/recipes",
-    "POST"
-  );
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    postData({
+    const doc = {
       title,
       method,
       cookingTime: cookingTime + " minutes",
       ingredients: ingrdients,
-    });
+    };
+
+    try {
+      await ProjectFirestore.collection("recipes").add(doc);
+      history.push("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const addIngrdient = (e) => {
@@ -40,11 +42,6 @@ const Create = () => {
     ingrdientInput.current.focus();
   };
 
-  useEffect(() => {
-    if (data) {
-      history.push("/");
-    }
-  }, [data]);
   return (
     <div className="container">
       <div className={`crate ${mode}`}>
@@ -70,7 +67,11 @@ const Create = () => {
                   onChange={(e) => setNewIngrdients(e.target.value)}
                 />
                 <div>
-                  <button className="btn ingr-btn" onClick={addIngrdient}>
+                  <button
+                    // style={{ background: color }}
+                    className="btn-secondary ingr-btn"
+                    onClick={addIngrdient}
+                  >
                     Add
                   </button>
                 </div>
@@ -102,7 +103,7 @@ const Create = () => {
               onChange={(e) => setCookingTime(e.target.value)}
             />
           </label>
-          <button className="btn">Create</button>
+          <button className="btn-secondary">Create</button>
         </form>
       </div>
     </div>

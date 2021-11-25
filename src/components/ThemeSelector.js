@@ -2,7 +2,6 @@ import React from "react";
 import { useTheme } from "../hooks/useTheme";
 import "./ThemeSelector.css";
 import sunIcon from "../assets/sun.svg";
-const themeColor = ["#f25f4c", "#6246ea", "#00ebc7"];
 
 const ThemeSelector = () => {
   const { changeColor, changeMode, mode } = useTheme();
@@ -22,7 +21,7 @@ const ThemeSelector = () => {
           alt="sun"
         />
       </div>
-      <div className="theme_btn">
+      {/* <div className="theme_btn">
         {themeColor.map((color) => (
           <div
             key={color}
@@ -30,7 +29,7 @@ const ThemeSelector = () => {
             style={{ background: color }}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

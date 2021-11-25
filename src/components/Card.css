@@ -1,5 +1,6 @@
 .card__wrapper .card.dark {
-  background: #16161a;
+  background: #393e46;
+  transition: 0.3s ease-in;
 }
 .card__wrapper .card.dark h3 {
   color: #fffffe;
@@ -8,7 +9,9 @@
 .card__wrapper .card.dark span {
   color: #94a1b2;
 }
-
+.card__wrapper .card.dark .deleteIcon {
+  filter: invert(100%);
+}
 .card__wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -17,6 +20,7 @@
   padding-bottom: 4rem;
 }
 .card {
+  position: relative;
   background: #eff0f3;
   color: #0d0d0d;
   max-width: 350px;
@@ -30,7 +34,13 @@
   font-weight: bold;
   font-size: 1.3rem;
 }
-
+.deleteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
 @media (min-width: 768px) {
   .card__wrapper {
     grid-template-columns: 1fr 1fr;

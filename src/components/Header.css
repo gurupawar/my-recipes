@@ -1,8 +1,9 @@
 .header {
   background: #eff0f3;
 }
+
 .header.dark {
-  background: #16161a;
+  background: #393e46;
 }
 .header.dark .logo {
   filter: invert(100%);

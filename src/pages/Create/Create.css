@@ -1,24 +1,29 @@
 .crate.dark {
-  background: #16161a;
-  box-shadow: 0 1px 3px rgba(128, 127, 127, 0.068),
-    0 1px 2px rgba(175, 175, 175, 0.082);
+  background: #393e46;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.068),
+    0 1px 2px rgba(255, 255, 255, 0.082);
+  /* transition: 0.3s ease-in; */
 }
 
 .crate.dark h2,
 .crate.dark label > input,
 .crate.dark label > div input,
-.crate.dark label > span textarea {
+.crate.dark label > span textarea,
+.crate.dark label > div li {
   color: #fff;
+  transition: 0.3s ease-in;
 }
 .crate.dark label > span {
   color: #94a1b2;
+  transition: 0.3s ease-in;
 }
 
 .crate.dark label > input,
 .crate.dark label > div input,
 .crate.dark label > span textarea {
   border-bottom: 1px solid rgba(255, 255, 255, 0.158);
-  background: #16161a;
+  background: #393e46;
+  transition: 0.3s ease-in;
 }
 .crate {
   margin-top: 2rem;
@@ -40,8 +45,7 @@ textarea {
 }
 .crate label input,
 textarea {
-  width: 100%;
-  max-width: 500px;
+  background-color: inherit;
   padding: 1rem;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.158);
@@ -68,5 +72,10 @@ textarea {
 @media (min-width: 768px) {
   .crate {
     padding: 3rem 5rem;
+  }
+  .crate label input,
+  textarea {
+    width: 100%;
+    max-width: 500px;
   }
 }

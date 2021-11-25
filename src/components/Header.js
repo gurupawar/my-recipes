@@ -6,7 +6,6 @@ import { useTheme } from "../hooks/useTheme";
 
 const Header = () => {
   const { mode } = useTheme();
-
   return (
     <header className={`header ${mode}`}>
       <div className="container">

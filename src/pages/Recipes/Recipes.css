@@ -1,16 +1,19 @@
 .recipe.dark {
-  background: #16161a;
+  background: #393e46;
   box-shadow: 0 1px 3px rgba(128, 127, 127, 0.068),
     0 1px 2px rgba(175, 175, 175, 0.082);
+  transition: 0.3s ease-in;
 }
 .recipe.dark h1,
 .recipe.dark div,
 .recipe.dark span {
   color: #fff;
+  transition: 0.3s ease-in;
 }
 .recipe.dark div > li,
 .recipe.dark p {
   color: #94a1b2;
+  transition: 0.3s ease-in;
 }
 .recipe {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
