@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Card from "../../components/Card";
-// import { useFetch } from "../../hooks/useFetch";
 import { ProjectFirestore } from "../../firebase/config";
 
 const Home = () => {
@@ -10,7 +9,6 @@ const Home = () => {
 
   useEffect(() => {
     setIsPending(true);
-
     const unSub = ProjectFirestore.collection("recipes").onSnapshot(
       (snapshot) => {
         if (snapshot.empty) {
@@ -27,7 +25,7 @@ const Home = () => {
       },
       (err) => {
         setError(err);
-        isPending(false);
+        setIsPending(false);
       }
     );
 

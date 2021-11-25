@@ -4,7 +4,7 @@ import "./ThemeSelector.css";
 import sunIcon from "../assets/sun.svg";
 
 const ThemeSelector = () => {
-  const { changeColor, changeMode, mode } = useTheme();
+  const { changeMode, mode } = useTheme();
 
   const toggleMode = () => {
     changeMode(mode === "dark" ? "light" : "dark");
